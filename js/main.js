@@ -6,26 +6,41 @@
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 
 
-// richiesta numero di km da percorrere
+let finalPrice;
 
+// richiesta numero di km da percorrere
+let askKm = parseInt(prompt("inserisci quanti km vuoi percorrere"));
+
+console.log(askKm);
 
 // richiesta età utente
+let askAge = parseInt(prompt("inserisci la tua età"));
 
+console.log(askAge);
 
 // calcolo prezzo in funzione dei km (0.21 €/km)
+let firstPrice = askKm * 0.21;
+
+console.log(firstPrice);
 
 
 // applicazione sconto in funzione dell'età
 
-    // se minorenne sconto 20%
+if (askAge < 18) { // se minorenne sconto 20%
 
+    finalPrice = firstPrice - (firstPrice * 0.20);
+    console.log(finalPrice);
 
-    // se over 65 sconto 40%
+} else if (askAge > 65) { // se over 65 sconto 40%
 
+    finalPrice = firstPrice - (firstPrice * 0.40);
+    console.log(finalPrice);
 
-    // altrimenti prezzo normale
+} else { // altrimenti prezzo normale
+    finalPrice = firstPrice;
+}
 
-
+    
 // aggiustamento prezzo finale con massimo due decimali 
 
 
