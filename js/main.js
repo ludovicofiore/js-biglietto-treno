@@ -13,15 +13,21 @@ let askKm = parseInt(prompt("inserisci quanti km vuoi percorrere"));
 
 console.log(askKm);
 
+document.getElementById("km").innerHTML = askKm;
+
 // richiesta età utente
 let askAge = parseInt(prompt("inserisci la tua età"));
 
 console.log(askAge);
 
+document.getElementById("age").innerHTML = askAge;
+
 // calcolo prezzo in funzione dei km (0.21 €/km)
 let firstPrice = askKm * 0.21;
 
 console.log(firstPrice);
+
+document.getElementById("initial-price").innerHTML = firstPrice;
 
 
 // applicazione sconto in funzione dell'età
