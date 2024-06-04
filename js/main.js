@@ -43,5 +43,11 @@ if (askAge < 18) { // se minorenne sconto 20%
     
 // aggiustamento prezzo finale con massimo due decimali 
 
+let refinedPrice = finalPrice.toFixed(2);
 
-// output prezzo finale 
+
+// output prezzo finale arrotondato
+
+console.log(refinedPrice);
+
+document.getElementById("prezzo").innerHTML = refinedPrice;
